@@ -61,9 +61,9 @@
                 <div class="form-group col-sm-6">
                     <p class="h5 text-primary">Subtotal: {{ Cart::subtotal() }}</p>
                 </div>
-                <div class="form-group col-sm-6">
+                <!--<div class="form-group col-sm-6">
                     <p class="h5 text-primary">IVA: {{ Cart::tax() }}</p>
-                </div>
+                </div>-->
                 <div class="form-group col-sm-6">
                     <p class="h5 text-primary">Total: {{ Cart::total() }}</p>
                 </div>

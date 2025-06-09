@@ -14,7 +14,7 @@
                         <form action="{{ route('pos.printInvoice') }}" method="post">
                             @csrf
                             <input type="hidden" name="customer_id" value="{{ $customer->id }}">
-                            <button type="submit" class="btn btn-primary-dark mr-2"><i class="las la-print"></i> Imprimir</button>
+                            <!--<button type="submit" class="btn btn-primary-dark mr-2"><i class="las la-print"></i> Imprimir</button>-->
                         </form>
 
                         <button type="button" class="btn btn-primary-dark mr-2" data-toggle="modal" data-target=".bd-example-modal-lg">Crear</button>
@@ -23,7 +23,7 @@
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header bg-white">
-                                        <h3 class="modal-title text-center mx-auto">Invoice of {{ $customer->name }}<br/>Cantidad total ${{ Cart::total() }}</h3>
+                                        <h3 class="modal-title text-center mx-auto">Invoice of {{ $customer->name }}<br/>Cantidad total Bs.{{ Cart::total() }}</h3>
                                     </div>
                                     <form action="{{ route('pos.storeOrder') }}" method="post">
                                         @csrf
@@ -50,6 +50,7 @@
                                                 <div class="form-group">
                                                     <label for="pay">Pagar ahora</label>
                                                     <input type="text" class="form-control @error('pay') is-invalid @enderror" id="pay" name="pay" value="{{ old('pay') }}">
+
                                                     @error('pay')
                                                     <div class="invalid-feedback">
                                                         {{ $message }}
@@ -141,10 +142,10 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <b class="text-danger">Notas:</b>
+                            <!--<b class="text-danger">Notas:</b>
                             <p class="mb-0">Es un hecho establecido desde hace mucho tiempo que el lector se distraerá con el contenido legible de una página.
                                 al mirar en su trazado. El objetivo de utilizar Lorem Ipsum es que tiene una distribución de letras más o menos normal,
-                                en lugar de usar "Contenido aquí, contenido aquí", lo que hace que parezca un inglés legible.</p>
+                                en lugar de usar "Contenido aquí, contenido aquí", lo que hace que parezca un inglés legible.</p>-->
                         </div>
                     </div>
 
@@ -155,16 +156,16 @@
                                     <h5 class="mb-3">Detalles del pedido</h5>
                                     <div class="mb-2">
                                         <h6>Sub Total</h6>
-                                        <p>${{ Cart::subtotal() }}</p>
+                                        <p>Bs {{ Cart::subtotal() }}</p>
                                     </div>
-                                    <div>
+                                    <!--<div>
                                         <h6>IVA (18%)</h6>
                                         <p>${{ Cart::tax() }}</p>
-                                    </div>
+                                    </div>-->
                                 </div>
                                 <div class="ttl-amt py-2 px-3 d-flex justify-content-between align-items-center">
                                     <h6>Total</h6>
-                                    <h3 class="text-primary font-weight-700">${{ Cart::total() }}</h3>
+                                    <h3 class="text-primary font-weight-700">Bs.{{ Cart::total() }}</h3>
                                 </div>
                             </div>
                         </div>

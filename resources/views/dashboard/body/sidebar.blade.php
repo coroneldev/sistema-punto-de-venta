@@ -18,7 +18,7 @@
                             <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
                             <line x1="12" y1="22.08" x2="12" y2="12"></line>
                         </svg>
-                        
+
                         <span class="ml-4">Panel de control</span>
                     </a>
                 </li>
@@ -128,7 +128,7 @@
                 @endif
 
                 @if (auth()->user()->can('salary.menu'))
-                <li>
+                <!--<li>
                     <a href="#advance-salary" class="collapsed" data-toggle="collapse" aria-expanded="false">
                     <i class="fa-solid fa-cash-register"></i>
                         <span class="ml-3">Salario</span>
@@ -159,11 +159,11 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li>-->
                 @endif
 
                 @if (auth()->user()->can('attendence.menu'))
-                <li>
+                <!--<li>
                     <a href="#attendence" class="collapsed" data-toggle="collapse" aria-expanded="false">
                         <i class="fa-solid fa-calendar-days"></i>
                         <span class="ml-3">Asistencia</span>
@@ -184,14 +184,13 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li>-->
                 @endif
 
                 <hr>
 
-
                 @if (auth()->user()->can('roles.menu'))
-                <li>
+                <!--<li>
                     <a href="#permission" class="collapsed" data-toggle="collapse" aria-expanded="false">
                         <i class="fa-solid fa-key"></i>
                         <span class="ml-3">Rol & permiso</span>
@@ -216,25 +215,25 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li>-->
                 @endif
 
                 @if (auth()->user()->can('user.menu'))
-                <li class="{{ Request::is('users*') ? 'active' : '' }}">
+                <!--<li class="{{ Request::is('users*') ? 'active' : '' }}">
                     <a href="{{ route('users.index') }}" class="svg-icon">
                         <i class="fa-solid fa-users"></i>
                         <span class="ml-3">Usuarios</span>
                     </a>
-                </li>
+                </li>-->
                 @endif
 
                 @if (auth()->user()->can('database.menu'))
-                <li class="{{ Request::is('database/backup*') ? 'active' : '' }}">
+                <!--<li class="{{ Request::is('database/backup*') ? 'active' : '' }}">
                     <a href="{{ route('backup.index') }}" class="svg-icon">
                         <i class="fa-solid fa-database"></i>
                         <span class="ml-3">Backup</span>
                     </a>
-                </li>
+                </li>-->
                 @endif
             </ul>
         </nav>

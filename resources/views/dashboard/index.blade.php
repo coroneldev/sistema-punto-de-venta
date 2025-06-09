@@ -20,7 +20,7 @@
                     <p class="mb-0 mr-4">Panel ofrece vistas clave desempeño.</p>
                 </div>
             </div>
-        </div> 
+        </div>
         <div class="col-lg-9">
             <div class="row">
                 <div class="col-lg-4 col-md-4">
@@ -198,7 +198,7 @@
                         <div class="style-text text-left">
                             <h5 class="mb-2">{{ $product->product_name }}</h5>
                             <p class="mb-2">Stock : {{ $product->product_store }}</p>
-                            <p class="mb-0">Precio : ${{ $product->selling_price }}</p>
+                            <p class="mb-0">Precio : Bs. {{ $product->selling_price }}</p>
                         </div>
                     </div>
                 </div>

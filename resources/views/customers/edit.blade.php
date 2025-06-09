@@ -91,11 +91,9 @@
                                 <label for="bank_name">Nombre del banco</label>
                                 <select class="form-control @error('bank_name') is-invalid @enderror" name="bank_name">
                                     <option value="">Selecionar año..</option>
-                                    <option value="BRI" @if(old('bank_name', $customer->bank_name) == 'BRI')selected="selected"@endif>BRI</option>
-                                    <option value="BNI" @if(old('bank_name', $customer->bank_name) == 'BNI')selected="selected"@endif>BNI</option>
-                                    <option value="BCA" @if(old('bank_name', $customer->bank_name) == 'BCA')selected="selected"@endif>BCA</option>
-                                    <option value="BSI" @if(old('bank_name', $customer->bank_name) == 'BSI')selected="selected"@endif>BSI</option>
-                                    <option value="Mandiri" @if(old('bank_name', $customer->bank_name) == 'Mandiri')selected="selected"@endif>Mandiri</option>
+                                    <option value="BU" @if(old('bank_name', $customer->bank_name) == 'BU')selected="selected"@endif>BU</option>
+                                    <option value="BB" @if(old('bank_name', $customer->bank_name) == 'BB')selected="selected"@endif>BB</option>
+
                                 </select>
                                 @error('bank_name')
                                 <div class="invalid-feedback">
